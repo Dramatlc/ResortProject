@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<title>정식리조트</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/outline_anchor_black_24dp.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    a,h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic',돋움;}
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+
+      #event {
+          background-color: white;
+      }
+      #what {
+          background-color: white;
+          color: black;
+      }
+      #what,#event p {
+          font-size: 150%;
+
+      }
+      .post{
+          max-width: 70%;
+          padding-top:3%;
+          border-bottom: 0;
+          position: relative;
+          margin: 0 auto;
+      }
+</style>
+
+
+<body id="myPage">
+
+<div class="w3-bar w3-white"style="width: 100%;z-index: 2;font-size: 24px;height: 30px;overflow: hidden;"><h4 style="padding-left: 200px;"></h4></div>
+<div class="w3-bar" style="width: 100%;z-index: 2;font-size: 24px;overflow: hidden;background-color: #afdffb;">
+    <div class style="padding-left: 15%;"><a href="#" class="w3-button w3-hover-orange"><i class="fa fa-anchor w3-margin-right"></i><b>메인</b></a>
+        <a href="attraction1.html"class="w3-button w3-hover-orange"><b>어트랙션</b></a>
+        <a href="room1.html" class="w3-button  w3-hover-orange "><b>객실</b></a>
+        <a href="service.html"class="w3-button w3-hover-orange"><b>서비스</b></a>
+        <a href="customer.html" class="w3-button w3-hover-orange"><b>Q/A</b></a>
+    </div>
+</div>
+
+<div class="w3-bar">
+    <div class style="padding-right: 3%;">
+        <a href="load.html"class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">오시는 길</a>
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">회원가입</button>
+        <div id="id02" class="w3-modal" style="color: black">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px; min-height: 400px;">
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
+                </div>
+                <form class="w3-container" method="post">
+                    <label style="color: black"><b>이름</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="text" placeholder="Enter Name" name="name" required>
+                    <label style="color: black"><b>이메일</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border"  type="text" placeholder="Enter Email" name="email" required>
+                    <label style="color: black"><b>비밀번호</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="password" placeholder="Enter Password" name="pwd" required>
+                    <label style="color: black"><b>전화번호</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border"  type="number" placeholder="Enter Tel" name="tel" required>
+                    <button class="w3-button w3-blue" onclick="javascript:alert('서비스 준비중입니다.')">회원가입</button>
+                </form>
+            </div>
+        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">로그인</button>
+        <div id="id01" class="w3-modal" style="color: black">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:400px; min-height: 250px;">
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
+                </div>
+                <form class="w3-container" method="post">
+                    <label style="color: black"><b>이메일</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
+                    <label style="color: black"><b>비밀번호</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="pwd" required>
+                    <button class="w3-button w3-blue" onclick="javascript:alert('서비스 준비중입니다.')">로그인</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="post">
+    <div class="w3-display-container">
+        <img class="mySlides" src="images/slide1.jpg" style="width:100%;min-height:300px;max-height:450px;margin-bottom: 30px;">
+        <img class="mySlides" src="images/slide2.jpg" style="width:100%;min-height:300px;max-height:450px;margin-bottom: 30px;">
+        <img class="mySlides" src="images/slide3.jpg" style="width:100%;min-height:300px;max-height:450px;margin-bottom: 30px;">
+        <img class="mySlides" src="images/slide4.jpg" style="width:100%;min-height:300px;max-height:450px;margin-bottom: 30px;">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;">
+            <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-padding-32" id="what" style="padding-left: 5%; border-top: 2px solid #7b8290; border-bottom: 2px solid #d4d7db;">
+        <h1 class="w3-xxxlarge">시원하고 짜릿한 물로의 여행</h1>
+        <h1 class="w3-xxxlarge" style="color: skyblue;"><b>정식리조트</b></h1><br>
+        <h3>화사하게 만발한 꽃을 보며 만물의 소생을 축하는 봄! <br>
+            자연이 뿜어내는 활력에 가슴 벅차 오르는 여름…<br>
+            자연의 섭리 속에 결실에 대해 경건해 지는 가을!<br>
+            온통 새하얀 세상만큼이나 순수한 동심의 세계로 초대하는 겨울!</h3>
+
+    </div>
+
+    <div class="w3-row-padding w3-padding-32 w3-center" id="work">
+        <h1><b>미리보기</b></h1><br>
+        <div class="w3-third w3-card">
+            <a href="attraction1.html"><img src="image/attraction1-1.jpg" style="width: 100%"></a>
+            <div class="w3-container">
+                <h3><b>실내 슬라이드</b></h3>
+            </div>
+        </div>
+
+        <div class="w3-third w3-card">
+            <a href="attraction2.html"><img src="image/attraction2-1.jpg" style="width: 100%"></a>
+            <div class="w3-container">
+                <h3><b>몬스터 블라스터</b></h3>
+            </div>
+        </div>
+
+        <div class="w3-third w3-card">
+            <a href="room1.html"><img src="image/sweet1.jpg" style="width: 100%"></a>
+            <div class="w3-container">
+                <h3><b>스위트 룸</b></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row w3-container w3-padding-32 w3-center" id="event">
+        <h1><b>이달의 이벤트</b></h1><br><br><br>
+        <div class="w3-third">
+            <img src="images/event1.jpg"  style="width:70%" class="w3-Bordered">
+            <h3><b>정식리조트 특별 세트권</b></h3>
+            <h4><br>이용권 3매 구매시 30%할인</h4>
+        </div>
+        <div class="w3-third">
+            <img src="images/event2.jpg"  style="width:70%" class="w3-Bordered">
+            <h3><b>정식리조트 마스크 무료 증정</b></h3>
+            <h4><br>입장객 대상 마스크 1인 1매증정</h4>
+        </div>
+        <div class="w3-third">
+            <img src="images/event3.jpg"  style="width:70%" class="w3-Bordered">
+            <h3><b>군인/경찰/소방공무원 할인</b></h3>
+            <h4><br>종일권 본인:10,000원<br>동반인(최대3인):20,000원</h4>
+        </div>
+    </div>
+
+</div>
+
+<footer class="w3-padding-32 w3-padding-large">
+    <div class="w3-bar" style="padding-left:5%;">
+        <h6>(주)정식리조트 &emsp;  경기 포천시 호국로 1007  &emsp; &emsp;대표이사 : 윤정식</h6>
+        <h6>사업자 등록번호 22x-xx-xxxxx</h6>
+        <h6>예약센터: 02-5555-5555 &emsp; 운영시간 : 09:00~18:00(연중무휴)  &emsp; 이메일 : y97791013@gmail.com</h6>
+    </div>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+        <a class="w3-button w3-theme w3-circle" href="#myPage"><span class="w3-xlarge">
+                <i class="fa fa-level-up"></i></span></a>
+    </div>
+
+</footer>
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex-1].style.display = "block";
+            dots[slideIndex-1]
+    }
+</script>
+
+</body>
+</html>

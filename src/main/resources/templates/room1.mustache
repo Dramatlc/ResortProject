@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/outline_anchor_black_24dp.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet"  href="./css/lightslider.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/lightslider.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        a,h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic',돋움;}
+        ul{
+            list-style: none outside none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .gallery{ width: 800px; }
+
+        #table table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+            font-family: 'Nanum Gothic',돋움;
+        }
+        #table th {
+            border: 1px solid #444444;
+            text-align: center;
+            background-color: darkgray;
+            height: 35px;
+            width: 250px;
+        }
+        #table td {
+            border: 1px solid #444444;
+            text-align: center;
+            height: 85px;
+            width: 250px;
+        }
+
+
+        .day td,th { width: 187px;}
+        .content button {
+            height: 60px;
+            width: 150px;
+            background-color: black;
+            color: white;
+        }
+        button:hover { background-color: gray; }
+        .rv table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .rv td {
+            border: 2px solid #444444;
+            text-align: center;
+            height: 50px;
+        }
+        .post{
+            max-width: 70%;
+            padding-top:3%;
+            border-bottom: 0;
+            position: relative;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body id="mypage">
+
+<div class="w3-bar w3-white"style="width: 100%;z-index: 2;font-size: 24px;height: 30px;overflow: hidden;"></div>
+<div class="w3-bar" style="width: 100%;z-index: 2;font-size: 24px;overflow: hidden;background-color: #afdffb;">
+    <div class style="padding-left: 15%;"><a href="index" class="w3-button w3-hover-orange"><i class="fa fa-anchor w3-margin-right"></i><b>메인</b></a>
+        <a href="attraction1"class="w3-button w3-hover-orange"><b>어트랙션</b></a>
+        <a href="#" class="w3-button  w3-hover-orange "><b>객실</b></a>
+        <a href="service"class="w3-button w3-hover-orange"><b>서비스</b></a>
+        <a href="customer" class="w3-button w3-hover-orange"><b>Q/A</b></a>
+    </div>
+</div>
+
+<div class="w3-bar">
+    <div class style="padding-right: 3%;">
+        <a href="load"class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">오시는 길</a>
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">회원가입</button>
+        <div id="id02" class="w3-modal" style="color: black">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px; min-height: 400px;">
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
+                </div>
+                <form class="w3-container" method="post">
+                    <label style="color: black"><b>이름</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="text" placeholder="Enter Name" name="name" required>
+                    <label style="color: black"><b>이메일</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border"  type="text" placeholder="Enter Email" name="email" required>
+                    <label style="color: black"><b>비밀번호</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="password" placeholder="Enter Password" name="pwd" required>
+                    <label style="color: black"><b>전화번호</b></label>
+                    <input class="w3-input w3-margin-bottom w3-border"  type="number" placeholder="Enter Tel" name="tel" required>
+                    <button class="w3-button w3-blue" onclick="javascript:alert('서비스 준비중입니다.')">회원가입</button>
+                </form>
+            </div>
+        </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal">로그인</button>
+        <div id="id01" class="w3-modal" style="color: black">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:400px; min-height: 250px;">
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
+                </div>
+                <form class="w3-container" method="post">
+                    <label style="color: black"><b>이메일</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
+                    <label style="color: black"><b>비밀번호</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="pwd" required>
+                    <button class="w3-button w3-blue" onclick="javascript:alert('서비스 준비중입니다.')">로그인</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="post">
+    <div class="container-fluid bg-3 text-center w3-padding-32">
+
+        <ul class="nav nav-tabs" style="margin-bottom: 20px;">
+            <li class="active"><a data-toggle="tab" href="room1">스위트</a></li>
+            <li><a data-toggle="tab" href="room2">패밀리</a></li>
+            <li><a data-toggle="tab" href="room3">펫 동반 패밀리</a></li>
+        </ul>
+        <div class="w3-left" style="font-size: 40px;margin-left: 15%;"><b>스위트</b></div><br><br><br>
+        <div class="w3-left" style="font-size: 17px;margin-left: 15%; ">안락하고 편안한 휴식을 제공합니다.</div><br><br><br><br><br>
+        <div class="tab-content">
+            <div class="tab-pane fade in active">
+                <div class="gallery w3-padding-64" style="display: inline-block; border-top: 2px solid #d4d7db;max-width:850px;">
+                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                        <li data-thumb="image/thumb/sweet1.jpg">
+                            <img src="image/sweet1.jpg" />
+                        </li>
+                        <li data-thumb="image/thumb/sweet2.jpg">
+                            <img src="image/sweet2.jpg" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w3-content we-center w3-padding-64 content">
+                <h3 class="w3-panel w3-leftbar w3-border-black" style="text-align: left">객실 이용시간</h3>
+                <div id="table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th colspan="2">구분</th><th>입실시간</th><th>퇴실시간</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="2">주중</td><td>17:00 PM</td><td>12:00PM</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">금,토</td><td>16:00PM</td><td>11:00PM</td>
+                        </tr>
+                        </tbody>
+                    </table><br>
+                    <h3 class="w3-panel w3-leftbar w3-border-black" style="text-align: left">객실 이용 요금</h3><br>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>구분</th><th>일반 요금</th><th>회원요금</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>주중 </td><td rowspan="3">540,000원</td><td>105,000원</td>
+                        </tr>
+                        <tr>
+                            <td>금요일</td><td>124,000원</td>
+                        </tr>
+                        <tr>
+                            <td>토요일</td><td>157,000원</td>
+                        </tr>
+                        </tbody>
+                    </table><br><br>
+
+                </div>
+
+                <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-hide-small w3-hover-teal">예약하기</button>
+                <div id="id03" class="w3-modal" style="color: black">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                        <div class="w3-center"><br>
+                            <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright">&times;</span>
+                            <img src="image/sweet1.jpg" style="width:30%" class=" w3-margin-top">
+                        </div>
+                        <div class="w3-section rv">
+                            <table>
+                                <tr>
+                                    <td>객실 이름:</td>
+                                    <td colspan="2">스위트</td>
+                                </tr>
+                                <tr>
+                                    <td>예약자:</td>
+                                    <td colspan="2">로그인후 이용해주십시요</td>
+                                </tr>
+                                <tr>
+                                    <td>이메일:</td>
+                                    <td colspan="2">로그인후 이용해주십시요</td>
+                                </tr>
+                                <tr>
+                                    <td>입/퇴실 날짜</td>
+                                    <td><input type="date" name="sdate" required></td>
+                                    <td><input type="date" name="edate" required></td>
+                                </tr>
+                                <tr>
+                                    <td>요구사항:</td>
+                                    <td colspan="2"><input type="text" name="memo"></td>
+                                </tr>
+                            </table>
+                            <input type="text" name="rid" value="2" hidden><br>
+                            <button class="w3-button w3-black w3-section w3-padding" onclick="javascript:alert('서비스 준비중입니다.')">예약하기</button>
+                        </div>
+                        </form>
+                    </div>
+                </div><br><br>
+                <p>(대실문의는 전화주세요.)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>layouts/footer}}
